@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+const { useState, useRef, useEffect } = React;
 
 const CSS = `
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap');
@@ -822,7 +822,7 @@ function GameScreen({gs, setGs, el}) {
 // ─────────────────────────────────────────────────────────────
 // APP ROOT
 // ─────────────────────────────────────────────────────────────
-export default function App() {
+function App() {
   const [phase,sPhase] = useState('intro');
   const [elType,sElType] = useState(null);
   const [gs,sGs] = useState({
@@ -859,3 +859,5 @@ export default function App() {
     </>
   );
 }
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
