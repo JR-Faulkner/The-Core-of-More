@@ -82,6 +82,185 @@ const MLT = {
   uala:      ["Uala locates a trace moisture seep in the east wall and coaxes it into stable flow via the Pearl Siphon. 'Not much,' she notes. 'But consistent.' Passive regen: fractionally improved.","The undine purges mana corruption from three ambient nodes without commentary. Efficiency: high. Words used: none. AXIOM assessment: ideal.","Uala realigns your mana pressure distribution. 'You were holding tension in the lower matrix.' The dungeon feels more coherent afterward."],
 };
 
+// ─────────────────────────────────────────────────────────────
+// STEWARD SPRITES (16×16 pixel art, scales via SVG viewBox)
+// ─────────────────────────────────────────────────────────────
+function SpriteKip({sz=32}) {
+  return (
+    <svg width={sz} height={sz} viewBox="0 0 16 16" style={{display:'block',imageRendering:'pixelated',shapeRendering:'crispEdges'}}>
+      {/* head outline */}
+      <rect x="4" y="2" width="8" height="1" fill="#0C1A06"/>
+      <rect x="3" y="3" width="1" height="4" fill="#0C1A06"/>
+      <rect x="12" y="3" width="1" height="4" fill="#0C1A06"/>
+      {/* head fill */}
+      <rect x="4" y="3" width="8" height="4" fill="#78C828"/>
+      {/* amber eyes 2×2 */}
+      <rect x="5" y="3" width="2" height="2" fill="#F5A800"/>
+      <rect x="9" y="3" width="2" height="2" fill="#F5A800"/>
+      {/* pupils */}
+      <rect x="6" y="4" width="1" height="1" fill="#0C1A06"/>
+      <rect x="10" y="4" width="1" height="1" fill="#0C1A06"/>
+      {/* tan snout */}
+      <rect x="5" y="6" width="6" height="1" fill="#C8A060"/>
+      {/* head bottom outline */}
+      <rect x="4" y="7" width="8" height="1" fill="#0C1A06"/>
+      {/* body */}
+      <rect x="5" y="8" width="6" height="3" fill="#78C828"/>
+      <rect x="4" y="8" width="1" height="3" fill="#4A7818"/>
+      <rect x="11" y="8" width="1" height="3" fill="#4A7818"/>
+      {/* legs */}
+      <rect x="4" y="11" width="2" height="3" fill="#78C828"/>
+      <rect x="10" y="11" width="2" height="3" fill="#78C828"/>
+      {/* feet */}
+      <rect x="3" y="13" width="3" height="1" fill="#4A7818"/>
+      <rect x="10" y="13" width="3" height="1" fill="#4A7818"/>
+      {/* tail */}
+      <rect x="12" y="8" width="2" height="1" fill="#78C828"/>
+      <rect x="13" y="9" width="1" height="1" fill="#78C828"/>
+      <rect x="14" y="10" width="1" height="1" fill="#4A7818"/>
+    </svg>
+  );
+}
+
+function SpriteInta({sz=32}) {
+  return (
+    <svg width={sz} height={sz} viewBox="0 0 16 16" style={{display:'block',imageRendering:'pixelated',shapeRendering:'crispEdges'}}>
+      {/* horns */}
+      <rect x="4" y="0" width="1" height="3" fill="#AA2800"/>
+      <rect x="11" y="0" width="1" height="3" fill="#AA2800"/>
+      {/* head outline */}
+      <rect x="4" y="3" width="8" height="1" fill="#1A0500"/>
+      <rect x="3" y="4" width="1" height="4" fill="#1A0500"/>
+      <rect x="12" y="4" width="1" height="4" fill="#1A0500"/>
+      {/* head fill */}
+      <rect x="4" y="4" width="8" height="4" fill="#FF6B35"/>
+      {/* gold eyes 2×2 */}
+      <rect x="5" y="4" width="2" height="2" fill="#FFD700"/>
+      <rect x="9" y="4" width="2" height="2" fill="#FFD700"/>
+      {/* pupils */}
+      <rect x="6" y="5" width="1" height="1" fill="#1A0500"/>
+      <rect x="10" y="5" width="1" height="1" fill="#1A0500"/>
+      {/* smirk */}
+      <rect x="6" y="7" width="4" height="1" fill="#AA2800"/>
+      {/* head bottom outline */}
+      <rect x="4" y="8" width="8" height="1" fill="#1A0500"/>
+      {/* bat wings */}
+      <rect x="1" y="4" width="2" height="3" fill="#882200"/>
+      <rect x="0" y="5" width="1" height="2" fill="#882200"/>
+      <rect x="13" y="4" width="2" height="3" fill="#882200"/>
+      <rect x="15" y="5" width="1" height="2" fill="#882200"/>
+      {/* body */}
+      <rect x="5" y="9" width="6" height="3" fill="#FF6B35"/>
+      <rect x="4" y="9" width="1" height="3" fill="#AA2800"/>
+      <rect x="11" y="9" width="1" height="3" fill="#AA2800"/>
+      {/* notebook */}
+      <rect x="12" y="9" width="2" height="3" fill="#E8E0C0"/>
+      <rect x="12" y="10" width="2" height="1" fill="#C8B880"/>
+      {/* legs */}
+      <rect x="4" y="12" width="2" height="3" fill="#FF6B35"/>
+      <rect x="10" y="12" width="2" height="3" fill="#FF6B35"/>
+      {/* clawed feet */}
+      <rect x="3" y="14" width="3" height="1" fill="#AA2800"/>
+      <rect x="10" y="14" width="3" height="1" fill="#AA2800"/>
+    </svg>
+  );
+}
+
+function SpriteShuna({sz=32}) {
+  return (
+    <svg width={sz} height={sz} viewBox="0 0 16 16" style={{display:'block',imageRendering:'pixelated',shapeRendering:'crispEdges'}}>
+      {/* antennae tips (glowing) */}
+      <rect x="5" y="0" width="1" height="1" fill="#E8C0FF"/>
+      <rect x="10" y="0" width="1" height="1" fill="#E8C0FF"/>
+      {/* antennae stalks */}
+      <rect x="5" y="1" width="1" height="2" fill="#7030AA"/>
+      <rect x="10" y="1" width="1" height="2" fill="#7030AA"/>
+      {/* wings (left) */}
+      <rect x="1" y="2" width="2" height="1" fill="#9040CC"/>
+      <rect x="0" y="3" width="3" height="7" fill="#7030AA"/>
+      {/* wings (right) */}
+      <rect x="13" y="2" width="2" height="1" fill="#9040CC"/>
+      <rect x="13" y="3" width="3" height="7" fill="#7030AA"/>
+      {/* head outline */}
+      <rect x="4" y="3" width="8" height="1" fill="#1A0030"/>
+      <rect x="3" y="4" width="1" height="4" fill="#1A0030"/>
+      <rect x="12" y="4" width="1" height="4" fill="#1A0030"/>
+      {/* head fill (lavender) */}
+      <rect x="4" y="4" width="8" height="4" fill="#C080FF"/>
+      {/* teal eyes 2×2 */}
+      <rect x="5" y="4" width="2" height="2" fill="#80FFEE"/>
+      <rect x="9" y="4" width="2" height="2" fill="#80FFEE"/>
+      {/* pupils */}
+      <rect x="6" y="5" width="1" height="1" fill="#1A0030"/>
+      <rect x="10" y="5" width="1" height="1" fill="#1A0030"/>
+      {/* smile dimples */}
+      <rect x="6" y="7" width="1" height="1" fill="#7030AA"/>
+      <rect x="9" y="7" width="1" height="1" fill="#7030AA"/>
+      {/* head bottom outline */}
+      <rect x="4" y="8" width="8" height="1" fill="#1A0030"/>
+      {/* body */}
+      <rect x="5" y="9" width="6" height="4" fill="#C080FF"/>
+      <rect x="4" y="9" width="1" height="4" fill="#7030AA"/>
+      <rect x="11" y="9" width="1" height="4" fill="#7030AA"/>
+      {/* legs */}
+      <rect x="5" y="13" width="2" height="2" fill="#C080FF"/>
+      <rect x="9" y="13" width="2" height="2" fill="#C080FF"/>
+      {/* feet */}
+      <rect x="4" y="14" width="3" height="1" fill="#7030AA"/>
+      <rect x="9" y="14" width="3" height="1" fill="#7030AA"/>
+    </svg>
+  );
+}
+
+function SpriteUala({sz=32}) {
+  return (
+    <svg width={sz} height={sz} viewBox="0 0 16 16" style={{display:'block',imageRendering:'pixelated',shapeRendering:'crispEdges'}}>
+      {/* water droplet hair */}
+      <rect x="4" y="0" width="2" height="2" fill="#29D4FF"/>
+      <rect x="7" y="0" width="2" height="1" fill="#29D4FF"/>
+      <rect x="10" y="0" width="2" height="2" fill="#29D4FF"/>
+      <rect x="5" y="1" width="1" height="2" fill="#006A8A"/>
+      <rect x="9" y="1" width="1" height="2" fill="#006A8A"/>
+      {/* head outline */}
+      <rect x="4" y="3" width="8" height="1" fill="#001A28"/>
+      <rect x="3" y="4" width="1" height="4" fill="#001A28"/>
+      <rect x="12" y="4" width="1" height="4" fill="#001A28"/>
+      {/* head fill (aqua) */}
+      <rect x="4" y="4" width="8" height="4" fill="#29D4FF"/>
+      {/* pale serene eyes 2×2 */}
+      <rect x="5" y="5" width="2" height="2" fill="#E0F8FF"/>
+      <rect x="9" y="5" width="2" height="2" fill="#E0F8FF"/>
+      {/* pupils */}
+      <rect x="6" y="6" width="1" height="1" fill="#001A28"/>
+      <rect x="10" y="6" width="1" height="1" fill="#001A28"/>
+      {/* serene mouth */}
+      <rect x="7" y="7" width="2" height="1" fill="#006A8A"/>
+      {/* head bottom outline */}
+      <rect x="4" y="8" width="8" height="1" fill="#001A28"/>
+      {/* body (slightly wider) */}
+      <rect x="4" y="9" width="8" height="4" fill="#29D4FF"/>
+      <rect x="3" y="9" width="1" height="4" fill="#006A8A"/>
+      <rect x="12" y="9" width="1" height="4" fill="#006A8A"/>
+      {/* pearl siphon orb */}
+      <rect x="7" y="10" width="2" height="2" fill="#FFFFFF"/>
+      <rect x="7" y="10" width="2" height="1" fill="#E8E8FF"/>
+      {/* wavy water trail (instead of legs) */}
+      <rect x="3" y="13" width="10" height="1" fill="#29D4FF"/>
+      <rect x="4" y="14" width="3" height="1" fill="#006A8A"/>
+      <rect x="9" y="14" width="3" height="1" fill="#006A8A"/>
+      <rect x="5" y="15" width="6" height="1" fill="#29D4FF"/>
+    </svg>
+  );
+}
+
+function StewardSprite({k, sz=32}) {
+  if (k==='kip')   return <SpriteKip sz={sz}/>;
+  if (k==='inta')  return <SpriteInta sz={sz}/>;
+  if (k==='shuna') return <SpriteShuna sz={sz}/>;
+  if (k==='uala')  return <SpriteUala sz={sz}/>;
+  return null;
+}
+
 const ENCS = [
   {id:'rookie',  name:'Rookie Raider',      icon:'⚔️', hp:15, ess:8,  xp:15, mana:0,  mat:0, desc:"An adventurer approaches consulting a hand-drawn map. It's upside down. Their sword is pointed the right direction, at least. That's about the ceiling of their preparation.", win:"The raider retreats with ~60% of their original confidence. The rest is Essence now. AXIOM note: better than average result for minimal effort."},
   {id:'beetles', name:'Cave Beetle Colony', icon:'🪲', hp:10, ess:3,  xp:8,  mana:0,  mat:0, desc:"Eleven cave beetles have claimed your main passage as territory. They were here first, technically. That stops mattering approximately now.", win:"Colony rerouted. Several absorbed for Essence. The rest relocated. Kip looks personally accomplished about this."},
@@ -343,7 +522,7 @@ function StewardSelect({elType, onPick}) {
               onMouseEnter={()=>sHov(k)} onMouseLeave={()=>sHov(null)}
               style={{padding:18,border:`1px solid ${hov===k?s.col:'#182338'}`,background:hov===k?`${s.col}0D`:'#0C1422',cursor:'pointer',transition:'all .2s',boxShadow:hov===k?`0 0 26px ${s.col}2A`:'none'}}>
               <div style={{display:'flex',alignItems:'center',gap:10,marginBottom:10}}>
-                <span style={{fontSize:28}}>{s.icon}</span>
+                <StewardSprite k={k} sz={36}/>
                 <div>
                   <div style={{fontFamily:"'Press Start 2P'",fontSize:8,color:s.col}}>{s.name.toUpperCase()}</div>
                   <div style={{fontSize:9,color:'#1A2E40',marginTop:3,fontFamily:"'Share Tech Mono',monospace"}}>{s.type} · {s.el}</div>
@@ -478,7 +657,7 @@ function GameScreen({gs, setGs, el}) {
         <MH col={el.col}>MINION REGISTRY</MH>
         {s && <div style={{padding:'10px 12px',background:'#07101C',border:`1px solid ${s.col}33`,marginBottom:8}}>
           <div style={{display:'flex',alignItems:'center',gap:8}}>
-            <span style={{fontSize:20}}>{s.icon}</span>
+            <StewardSprite k={s.key} sz={24}/>
             <div>
               <div style={{fontSize:11,color:s.col,fontFamily:"'Share Tech Mono',monospace"}}>{s.name} <span style={{color:'#1E3048'}}>[STEWARD]</span></div>
               <div style={{fontSize:9,color:'#1E3048',marginTop:2,fontFamily:"'Share Tech Mono',monospace"}}>HP {s.hp}/{s.maxHp}</div>
@@ -554,7 +733,7 @@ function GameScreen({gs, setGs, el}) {
           {s && <div style={{background:'#060810',border:`1px solid ${s.col}28`,padding:12}}>
             <div style={{fontFamily:"'Press Start 2P'",fontSize:6,color:'#142232',marginBottom:8,letterSpacing:1}}>STEWARD</div>
             <div style={{display:'flex',alignItems:'center',gap:8,marginBottom:8}}>
-              <span style={{fontSize:22}}>{s.icon}</span>
+              <StewardSprite k={s.key} sz={28}/>
               <div>
                 <div style={{color:s.col,fontSize:11}}>{s.name}</div>
                 <div style={{fontSize:9,color:'#1A2E44',marginTop:2}}>{s.type}</div>
